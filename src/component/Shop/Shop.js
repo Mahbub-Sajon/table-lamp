@@ -15,9 +15,20 @@ const Shop = () => {
 
     const handleAddToCart = (product) =>{
         const newCart = [...cart, product];
-        setCart(newCart);
-        
+        setCart(newCart);   
     }
+
+    const oneItem = () =>{
+        const singleItem = cart[Math.floor(Math.random()*cart.length)];
+       
+        console.log(singleItem)
+        // setCart(oneItem);
+    }
+
+    const reset = () => {
+        setCart([]);
+    }
+
 
     return (
         <div className='shop-container'>
@@ -32,14 +43,17 @@ const Shop = () => {
            </div>
            <div className="cart-container">
                     <h3>Selected Item:</h3>
+                    {/* <Cart singleItem = {singleItem}></Cart> */}
                     {
                         cart.map(selectedItem => <Cart
                         key={selectedItem.id}
                         selectedItem = {selectedItem}
                         ></Cart>)
                     }
-                    <button>Suggest One</button> <br />
-                    <button>Reset</button>
+                    
+                    
+                    <button onClick={oneItem}>Suggest One</button> <br />
+                    <button onClick={reset}>Reset</button>
            </div>
         </div>
     );

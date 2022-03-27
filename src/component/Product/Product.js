@@ -1,4 +1,5 @@
 import React from 'react';
+import {AiOutlineShoppingCart} from 'react-icons/ai';
 import './Product.css'
 
 const Product = (props) => {
@@ -11,7 +12,9 @@ const Product = (props) => {
            <p className='product-name'>{name}</p>
             <p>Price: ${price}</p>
            </div>
-           <button onClick={() => props.handleAddToCart(props.product)} className='btn-cart'>Add to cart</button>
+           <button onClick={() => props.handleAddToCart(props.product)} className='btn-cart'> <p>Add to cart <AiOutlineShoppingCart></AiOutlineShoppingCart></p> 
+          
+           </button>
         </div>
     );
 };
