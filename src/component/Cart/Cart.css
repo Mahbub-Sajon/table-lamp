@@ -1,0 +1,12 @@
+.cart{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color:azure;
+    margin: 10px;
+    border: 1px solid rgb(89, 143, 143);
+    border-radius: 5px;
+}
+.cart-img{
+    width: 80px;
+    height: 70px;
+}
