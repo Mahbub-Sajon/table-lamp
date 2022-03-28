@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Table Lamp Shop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,10 +9,9 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open https://sweet-cranachan-83a6eb.netlify.app/ to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+About the site: This is a website where you can find your desired table lamp. We are giving you another opportunity. If you get confused after seeing these magnificent table-lamps then you can simply choose any 4 of them and then click on the suggest one button and our site will randomly suggest you a table lamp which will make easy for you to choose. After that you can simply click on the reset button to remove everything from your cart.  
 
 ### `yarn test`
 

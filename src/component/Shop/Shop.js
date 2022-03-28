@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Answer from '../Answers/Answer';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
@@ -12,24 +13,17 @@ const Shop = () => {
         .then(data => setProducts(data));
     }
     ,[]);
-
     const handleAddToCart = (product) =>{
         const newCart = [...cart, product];
         setCart(newCart);   
     }
-
     const oneItem = () =>{
         const singleItem = cart[Math.floor(Math.random()*cart.length)];
-       
-        console.log(singleItem)
-        // setCart(oneItem);
+        setCart([singleItem]);   
     }
-
     const reset = () => {
         setCart([]);
     }
-
-
     return (
         <div className='shop-container'>
            <div className="products-container">
@@ -43,18 +37,16 @@ const Shop = () => {
            </div>
            <div className="cart-container">
                     <h3>Selected Item:</h3>
-                    {/* <Cart singleItem = {singleItem}></Cart> */}
                     {
                         cart.map(selectedItem => <Cart
                         key={selectedItem.id}
                         selectedItem = {selectedItem}
                         ></Cart>)
                     }
-                    
-                    
-                    <button onClick={oneItem}>Suggest One</button> <br />
-                    <button onClick={reset}>Reset</button>
+                    <button className='choose-reset-btn' onClick={oneItem}>Suggest One</button> <br />
+                    <button className='choose-reset-btn' onClick={reset}>Reset</button>
            </div>
+           <Answer></Answer>
         </div>
     );
 };

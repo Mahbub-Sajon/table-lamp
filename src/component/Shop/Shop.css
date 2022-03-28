@@ -6,19 +6,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cart-container{
+    background-color: azure;
+}
+.choose-reset-btn{
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+    background-color: lightgreen;
+    border: 1px solid #b58fb6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.choose-reset-btn:hover{
+    background-color: rgb(91, 228, 187);
+}
 @media screen and (max-width: 768px) {
     .products-container{
         grid-template-columns: repeat(1, 1fr);

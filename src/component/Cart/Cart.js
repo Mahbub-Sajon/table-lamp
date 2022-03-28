@@ -3,8 +3,6 @@ import './Cart.css'
 
 const Cart = (props) => {
     const {name, img} = props.selectedItem;
-    
-  
     return (
         <div className='cart'>
           
